@@ -1,0 +1,168 @@
+:root{
+    --primary: #d81e5b;
+    --secondary:#8a4efc;
+    --light: #eee;
+    --light-alt:#61759b;
+    --dark:#131a26;
+    --dark-alt:#202b3e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Fira Sans","sans-serif" ;
+}
+
+
+body{
+    background-color: var(--dark-alt);
+    color:var(--light)   
+}
+.App{
+    padding: 32px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+h4{
+    font-size: 18px;
+    color: var(--light-alt);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 32px;
+
+}
+
+.todo{
+    position: relative;
+    background-color: var(--dark);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.todo:hover{
+    opacity: 0.5;
+}
+
+.todo .checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--dark-alt);
+    margin-right: 16px;
+    transition: 0.4s;
+   
+}
+.todo.checked .checkbox{
+    background-color: var(--primary);
+    background-image: linear-gradient(to bottom, var(--primary),var(--secondary));
+
+    
+}
+.todo .text{
+    font-size: 20px;
+}
+
+.todo.checked .text{
+    text-decoration: line-through;
+}
+
+.todo .delete_todo{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: red;
+        position:absolute;
+        right:16px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.addBtn{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    color: var(--light);
+    background-image: linear-gradient(to bottom right,var(--primary),var(--secondary));
+    font-size: 45px;
+    font-weight: 900;
+    cursor:pointer;
+}
+.popUP{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 100%;
+    max-width:400px;
+    background-color: var(--light);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 3px 24px var(--dark);
+}
+.deleteBtn{
+    position: absolute;
+    top:16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: var(--light);
+    border-radius: 50%;
+    background-color: var(--primary);
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popUP .content h3{
+    color: var(--dark);
+    font-weight:400;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.popUP .content input {
+    border: none;
+    appearance: none;
+    outline:none;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    width: 100%;
+    font-size: 20px;
+    box-shadow: 0px 3px 24px rgba(0,0,0,0.2);
+}
+
+.addTask {
+    padding: 16px 32px;
+    border-radius: 99px;
+    outline: none;
+    background-image: linear-gradient(to right,var(--primary),var(--secondary));
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 16px;
+    text-align: center;
+    cursor: pointer;
+}
